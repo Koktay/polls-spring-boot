@@ -87,10 +87,10 @@ public class PollService {
         }
 
         //TO-DO: add IP
-        List<String> ipAdresses = poll.getIpAdresses();
-        if (ipAdresses.contains(ip)) {
-            throw new Exception("You can only vote once!");
-        }
+//        List<String> ipAdresses = poll.getIpAdresses();
+//        if (ipAdresses.contains(ip)) {
+//            throw new Exception("You can only vote once!");
+//        }
 
         List<Option> options = poll.getOptions().stream().filter(option -> Objects.equals(option.getId(), optionId)).collect(Collectors.toList());
         if (options.size() == 1) {

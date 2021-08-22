@@ -79,7 +79,7 @@ public class DummyDataCmdLineRunner implements CommandLineRunner {
 
         Poll poll2 = new Poll("What frontend framework do you preffer?");
         poll2.setVisible(Boolean.TRUE);
-        poll2.setEndDate(new Date());
+        poll2.setEndDate(Date.from(tomorrow.atStartOfDay(ZoneId.systemDefault()).toInstant()));
         poll2.setIpAdresses(Arrays.asList("192.1.2.164"));
         poll2.setUser(u1);
 
